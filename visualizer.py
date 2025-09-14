@@ -9,7 +9,7 @@ class SortingVisualizer:
         self.origial_arr = arr[:]
         self.fig, self.ax = plt.subplots(figsize=(12, 6))
         self.title = title
-        self.bar_rects = self.ax.bar(range(len(arr)), arr, align="edge", color='skyblue')
+        self.bar_rects = self.ax.bar(np.arange(len(arr)), arr, align="edge", color='skyblue')
         self.ax.set_xlim(0, len(arr))
         self.ax.set_ylim(0, int(1.1 * max(arr)))
         self.ax.set_title(title)
@@ -26,7 +26,7 @@ class SortingVisualizer:
             else:
                 rect.set_color('skyblue')
         self.fig.canvas.draw()
-        plt.pause(0.001) # 必须加这个才能实时刷新
+        plt.pause(0.01) # 必须加这个才能实时刷新
 
     def show(self):
         plt.show()
