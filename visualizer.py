@@ -26,7 +26,7 @@ class SortingVisualizer:
             else:
                 rect.set_color('skyblue')
         self.fig.canvas.draw()
-        plt.pause(0.01) # 必须加这个才能实时刷新
+        plt.pause(0.5) # 必须加这个才能实时刷新
 
     def show(self):
         plt.show()
