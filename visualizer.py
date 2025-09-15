@@ -22,7 +22,7 @@ class SortingVisualizer:
         # 高亮正在操作的柱子
         for i, rect in enumerate(self.bar_rects):
             if i == idx1 or i == idx2:
-                rect.set_color('red')
+                rect.set_color('m')
             else:
                 rect.set_color('skyblue')
         self.fig.canvas.draw()
